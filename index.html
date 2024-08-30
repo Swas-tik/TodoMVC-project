@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo-app</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="todo-app-container">
+    <div class="header">
+      <h1>todos</h1>
+      <div class="input-field">
+        <div class="toggle">
+          <i class="fa-solid fa-chevron-down">˅</i>
+        </div>
+        <input class="todo-input" type="text" placeholder="What needs to be done?">
+        <button class="add-btn">Add</button>
+      </div>
+    </div>
+    <div class="main">
+    </div>
+    <div class="footer">
+      <div class="item-list">
+        <p><span> </span> item left</p>
+      </div>
+      <div class="item-status">
+        <a href="#/" class="all">All</a>
+        <a href="#/active" class="active">Active</a>
+        <a href="#/completed" class="completed">Completed</a>
+      </div>
+      <div class="clear-complete">
+        <button class="clear-btn">Clear completed</button>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
