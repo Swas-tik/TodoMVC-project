@@ -4,7 +4,7 @@ const clearAll = document.querySelector('.clear-btn')
 const main = document.querySelector('.main')
 const todoItem = document.querySelector('.item-list span')
 
-const todoList = [];
+let todoList = [];
 //Todo list
 function renderList() {
 
@@ -100,6 +100,17 @@ function footerUpdate(){
   }
 }
 
-clearAll.addEventListener('click', closeBtn)
+clearAll.addEventListener('click', clearTodo)
 window.addEventListener('hashchange', renderList);
   renderList();
+
+  function clearTodo(){
+    let activeTodo=[]
+    for(i=0; i< todoList.length; i++){
+      if(!todoList[i].completed){
+      activeTodo.push(todoList[i])
+      }
+    }
+    todoList = activeTodo
+    renderList()
+  }
